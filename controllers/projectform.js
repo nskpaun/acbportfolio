@@ -9,7 +9,7 @@ exports.getForm = function(req, res) {
 exports.postProject = function(req, res, next) {
 	var project = new Project({
 		name: req.body.pname,
-		slides: [{
+		slide: [{
 			text: req.body.ptext,
 			image: req.body.purl
 		}]
