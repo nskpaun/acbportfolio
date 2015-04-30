@@ -2,8 +2,11 @@ extends layout
 
 block content
   .page-header
-    h3 All Books
+    h3= title
 
   ul
-    for book in books
-      li= book.name
+    for project in projects
+      li= project.name
+      ul
+        for slide in project.slide
+          li= slide.text
