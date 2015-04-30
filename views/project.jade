@@ -4,9 +4,20 @@ block content
   .page-header
     h3= title
 
-  ul
-    for project in projects
-      li= project.name
-      ul
-        for slide in project.slide
-          li= slide.text
+  .circle-container-gray
+  .circle-container-white
+  div.circle-container
+    a.deg3
+      div.rotate3= 'Perspective 00'
+    a.deg54
+      div.rotate54= 'Perspective 01'
+    a.deg105
+      div.rotate105= 'Perspective 02'
+    a.deg156
+      div.rotate156= 'Perspective 03'
+    a.deg207
+      div.rotate207= 'Perspective 04'
+    a.deg258
+      div.rotate258= 'Perspective 05'
+    a.deg309
+      div.rotate309= 'Perspective 06'

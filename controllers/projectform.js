@@ -10,6 +10,7 @@ exports.postProject = function(req, res, next) {
 	var slides = [];
 	var texts = req.body.ptext;
 	var urls = req.body.purl;
+	
 	for (i = 0; i < texts.length; i ++) {
 		var ptext = req.body.ptext[i];
 		var purl = req.body.purl[i];
@@ -20,6 +21,7 @@ exports.postProject = function(req, res, next) {
 			})
 		}
 	}
+
 	var project = new Project({
 		name: req.body.pname,
 		slide: slides
