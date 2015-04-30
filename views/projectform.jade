@@ -9,16 +9,19 @@ block content
       label.col-sm-3.control-label(for='pname') Name
       .col-sm-7
         input.form-control(type='pname', name='pname', id='pname', placeholder='Name', autofocus)
-    .form-group
-      label.col-sm-3.control-label(for='ptext') Text
-      .col-sm-7
-        input.form-control(type='ptext', name='ptext', id='ptext', placeholder='Text')
-    .form-group
-      label.col-sm-3.control-label(for='purl') Image Url
-      .col-sm-7
-        input.form-control(type='purl', name='purl', id='purl', placeholder='Image Url')
-    .form-group
-      .col-sm-offset-3.col-sm-7
-        button.btn.btn-success(type='submit')
-          i.fa.fa-user-plus
-          | Submit New Project
+    - var n = 0
+    while n < 10
+      - n++
+      .form-group
+        label.col-sm-3.control-label(for='ptext[]')= "Text " + n
+        .col-sm-7
+          input.form-control(type='text', name='ptext[]', id='ptext'+n, placeholder='Text')
+      .form-group
+        label.col-sm-3.control-label(for='purl[]')= "Image Url " + n
+        .col-sm-7
+          input.form-control(type='text', name='purl[]', id='purl'+n, placeholder='Image Url')
+      .form-group
+    .col-sm-offset-3.col-sm-7
+      button.btn.btn-success(type='submit')
+        i.fa.fa-user-plus
+        | Submit New Project
