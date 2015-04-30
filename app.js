@@ -28,6 +28,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
+var porteroController = require('./controllers/porterohill')
 
 /**
  * API keys and Passport configuration.
@@ -94,6 +95,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
  */
 app.get('/', homeController.index);
 app.get('/login', userController.getLogin);
+app.get('/porterohill', porteroController.getProject);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
 app.get('/forgot', userController.getForgot);
