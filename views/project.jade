@@ -8,25 +8,18 @@ block content
   .circle-container-gray
   .circle-container-white-line
   .circle-container-gray-center
+  - var slides = projects[0].slide
   div.circle-container
-    a.deg3
-      div.rotate3= 'Perspective 00'
-    a.deg54
-      div.rotate54= 'Perspective 01'
-    a.deg105
-      div.rotate105= 'Perspective 02'
-    a.deg156
-      div.rotate156= 'Perspective 03'
-    a.deg207
-      div.rotate207= 'Perspective 04'
-    a.deg258
-      div.rotate258= 'Perspective 05'
-    a.deg309
-      div.rotate309= 'Perspective 06'
+    - var m = 0
+    while m < 7
+      - var degree = m*51+3;
+      a(class='deg'+degree)
+        div(class='rotate'+degree)=slides[m].subtitle
+      -m++
   - var n = 0
   while n < 7
     .circle-container-content(id='content0'+n)
       a.close-button close
-      h4='Perspective 0'+n
-      p Vice meggings 3 wolf moon, twee drinking vinegar church-key lumbersexual asymmetrical post-ironic tattooed cardigan plaid. Lomo gentrify taxidermy fingerstache distillery. Sriracha authentic Neutra XOXO, paleo twee McSweeney's wolf mixtape narwhal Etsy. Food truck mumblecore Brooklyn, jean shorts cronut fanny pack four dollar toast you probably haven't heard of them synth small batch direct trade ethical master cleanse. Food truck freegan you probably haven't heard of them seitan, artisan pork belly fanny pack. Yr next level mumblecore crucifix, jean shorts bitters slow-carb whatever cred PBR&B. Sartorial 90's selfies, normcore meh YOLO skateboard tattooed XOXO squid organic craft beer mustache hella.
+      h4=slides[n].subtitle
+      p=slides[n].description
     -n++
