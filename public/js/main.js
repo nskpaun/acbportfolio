@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  $('body').css('background-image','url('+slides[0].image+')');
   var closeAll = function() {
   	for(i = 0; i < 7; i++) {
   	  $('#content0'+i).css('visibility','hidden');
@@ -9,9 +10,9 @@ $(document).ready(function() {
   var showContent = function(contentIndex) {
   	closeAll();
   	$('#content0'+contentIndex).css('visibility','visible');
+  	$('body').css('background-image','url('+slides[contentIndex].image+')');
   }
 
-  // Place JavaScript code here...
   $('.deg3').click(function () {
     showContent(0);
   });
