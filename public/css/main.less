@@ -110,7 +110,47 @@ footer {
   margin: 1.75em auto 0;
 }
 
+.circle-container-content {
+  visibility: hidden;
+  position: fixed;
+  top: 22.4em;
+  left: 32.5em;
+  width: 33em;
+  height: 33em;
+  padding: 2.8em; /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin: 1.75em auto 0;
+}
 
+.close-button {
+  margin-left: 13em;
+  top: 24em;
+  color: #A8A8A8;
+  position: relative;
+}
+
+.circle-container-content h4 {
+  width: 22em;
+  top:2em;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.circle-container-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 12em;
+  word-wrap: break-word;
+  text-align: center;
+  color: #ffffff;
+  width: 24em;
+  top: 4em;
+  left: 1.5em;
+  position: relative;
+}
 
 .circle-container a {
   display: block;
