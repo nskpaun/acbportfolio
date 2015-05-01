@@ -8,6 +8,8 @@ lib-cov
 *.gz
 *.swp
 
+/config/secrets.js
+
 pids
 logs
 results
