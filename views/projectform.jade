@@ -10,12 +10,16 @@ block content
       .col-sm-7
         input.form-control(type='pname', name='pname', id='pname', placeholder='Name', autofocus)
     - var n = 0
-    while n < 10
+    while n < 7
       - n++
       .form-group
-        label.col-sm-3.control-label(for='ptext[]')= "Text " + n
+        label.col-sm-3.control-label(for='psubtitle[]')= "Subtitle " + n
         .col-sm-7
-          input.form-control(type='text', name='ptext[]', id='ptext'+n, placeholder='Text')
+          input.form-control(type='text', name='psubtitle[]', id='psubtitle'+n, placeholder='Subtitle')
+      .form-group
+        label.col-sm-3.control-label(for='pdescription[]')= "Description " + n
+        .col-sm-7
+          input.form-control(type='text', name='pdescription[]', id='pdescription'+n, placeholder='Description')
       .form-group
         label.col-sm-3.control-label(for='purl[]')= "Image Url " + n
         .col-sm-7

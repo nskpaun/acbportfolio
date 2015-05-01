@@ -8,17 +8,20 @@ exports.getForm = function(req, res) {
 
 exports.postProject = function(req, res, next) {
 	var slides = [];
-	var texts = req.body.ptext;
+	var subtitles = req.body.psubtitle;
 	var urls = req.body.purl;
+	var descriptions = req.body.pdescription;
 	
-	for (i = 0; i < texts.length; i ++) {
-		var ptext = req.body.ptext[i];
-		var purl = req.body.purl[i];
-		if (purl.length > 0 && ptext.length > 0) {
+	for (i = 0; i < subtitles.length; i ++) {
+		var psubtitle = subtitles[i];
+		var purl = urls[i];
+		var pdescription = descriptions[i];
+		if (purl.length > 0 && psubtitle.length > 0) {
 			slides.push({
-				text: req.body.ptext[i],
-				image: req.body.purl[i]
-			})
+				subtitle: psubtitle,
+				description: pdescription,
+				image: purl
+			});
 		}
 	}
 
